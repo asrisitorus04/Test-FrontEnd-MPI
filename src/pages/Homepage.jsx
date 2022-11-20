@@ -52,6 +52,33 @@ const Homepage = () => {
         },
     ]
 
+    const dataInventory = [
+        {
+            title: "New Order",
+            value: 3,
+        },
+        {
+            title: "Prepare Order",
+            value: 5,
+        },
+        {
+            title: "Waiting Pickup",
+            value: 12,
+        },
+        {
+            title: "Sent",
+            value: 9,
+        },
+        {
+            title: "Cancel",
+            value: 7,
+        },
+        {
+            title: "Done",
+            value: 5,
+        },
+    ]
+
     return (
         <div className="px-6">
             <h1 className="font-bold text-xl mb-5">Order Statistic</h1>
@@ -89,6 +116,29 @@ const Homepage = () => {
                         )
                     })}
                 </div>
+            </div>
+            <div className="flex justify-between">
+                <Card width="w-6/12" height="h-68 mb-10" className="border p-5 pb-8">
+                    <Card.Title className="text-xl font-bold flex justify-between">
+                        <p>Inventory</p>
+                        <BsThreeDotsVertical size={26} />
+                    </Card.Title>
+                    <Card.Body className="mt-5">
+                        {dataInventory.map((item, i) => {
+                            return (
+                                <div key={i} className="flex justify-between px-5 mt-2">
+                                    <p>{item.title}</p>
+                                    <p className="w-6 h-6 rounded-lg shadow bg-[#b9e2ff] text-[#3b4951] flex justify-center items-center font-semibold">{item.value}</p>
+                                </div>
+                            )
+                        })}
+                    </Card.Body>
+                </Card>
+                <Card width="w-5/12" height="h-68 mb-10" className="border p-5 pb-8">
+                    <Card.Title className="text-xl font-bold">
+                        <p>Persentase Penjualan Obat</p>
+                    </Card.Title>
+                </Card>
             </div>
         </div>
     )
