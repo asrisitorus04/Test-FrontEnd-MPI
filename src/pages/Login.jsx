@@ -11,9 +11,9 @@ const Login = () => {
     },[])
 
     return (
-        <>
+        <div className="border bg-[#e8eefa] h-screen">
             <button onClick={() => dispatch(changeActive("Login"))}>Test</button>
-        </>
+        </div>
     )
 }
 

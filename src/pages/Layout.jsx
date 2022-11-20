@@ -41,14 +41,13 @@ const Layout = ({ children }) => {
                 {/* List nav */}
                 <div className="mt-10">
                     {nav.map((item, i) => {
-                        console.log(item.name)
                         return (
                             <li onClick={() => navigate(item.name)} key={i} className={`flex p-2 mb-3 cursor-pointer list-none font-semibold hover:text-[#69b5e1] hover:bg-[#e5ebf1] ${navActive === item.name ? "text-[#69b5e1] bg-[#e5ebf1]" : ""}`}>{item.icon} {item.name}</li>
                         )
                     })}
                 </div>
             </div>
-            <div className="w-8/12">{children}</div>
+            <div className={navActive === "Login" ? "w-full" : "w-8/12"}>{children}</div>
         </div>
     )
 }
