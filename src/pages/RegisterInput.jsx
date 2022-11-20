@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react'
 import NavbarRegis from "../components/NavbarRegis";
 
-const Register = () => {
+const RegisterInput = () => {
   return (
     <>
-      <div>
+    <div>
         <NavbarRegis />
         <div>
           <div class="flex">
@@ -83,7 +83,7 @@ const Register = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Register;
+export default RegisterInput
