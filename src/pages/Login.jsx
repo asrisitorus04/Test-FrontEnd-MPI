@@ -23,10 +23,12 @@ const Login = () => {
         </div>
 
         <div className="text-center mt-28">
-          <h5 className="text-lg font-bold">Silahkan masuk ke dalam akun anda dan kelola apotek anda.</h5>
+          <h5 className="text-lg font-bold mb-4">Silahkan masuk ke dalam akun anda dan kelola apotek anda.</h5>
 
           <div>
-            <h1 className="text-2md text-left ml-80 font-semibold">EMAIL</h1>
+            <div className="ml-80">
+              <h1 className="text-2md ml-52 text-left w-64 font-semibold">EMAIL</h1>
+            </div>
             <Input
               id="Input Username Lgn"
               placeholder="Input username"
@@ -35,7 +37,9 @@ const Login = () => {
             />
           </div>
           <div>
-            <h1 className="text-2md text-left ml-80 font-semibold">PASSWORD</h1>
+            <div className="ml-80">
+            <h1 className="text-2md ml-52 text-left w-64  font-semibold">PASSWORD</h1>
+            </div>
             <Input
               id="Input Password Lgn"
               placeholder="Input Password"
