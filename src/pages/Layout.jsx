@@ -4,6 +4,7 @@ import { CgProfile } from "react-icons/cg"
 import { HiOutlineHome } from "react-icons/hi"
 import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
+import Navbar from "../components/Navbar"
 
 const Layout = ({ children }) => {
 
@@ -47,7 +48,10 @@ const Layout = ({ children }) => {
                     })}
                 </div>
             </div>
-            <div className={navActive === "Login" ? "w-full" : "w-8/12"}>{children}</div>
+            <div className={navActive === "Login" ? "w-full bg-[#e8eefa]" : "w-10/12 bg-[#e8eefa]"}>
+                <Navbar />
+                {children}
+            </div>
         </div>
     )
 }
