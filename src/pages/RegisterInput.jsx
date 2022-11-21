@@ -1,18 +1,55 @@
 import React from "react";
 import NavbarRegis from "../components/NavbarRegis";
 import { TbNotes } from "react-icons/tb";
+import { ImLocation } from "react-icons/im";
+import { GoChecklist } from "react-icons/go";
+import { TbMinusVertical } from "react-icons/tb";
 
 const RegisterInput = () => {
   return (
     <>
-      <div>
+      <div className="bg-white">
         <NavbarRegis />
         <div>
           <div class="flex">
             <div class="flex-1 w-64">
-              <div>Pendaftaran Sarana</div>
-              <div>Register</div>
+
+              <div className="card w-96 bg-base-100 mt-10 ml-20">
+                <div className="card-body">
+                  <div>
+                    <div className="flex">
+                      <div className="flex-auto w-10">
+                        {/* <IoPersonCircle /> */}
+                        <ImLocation className="h-8 w-8 text-[#0ea5e9]" />
+                      </div>
+                      <div className="flex-auto w-80 ml-4">
+                        <h2 className="card-title">Pendaftaran Sarana</h2>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="flex-auto w-10">
+                      {/* <IoPersonCircle /> */}
+                      <TbMinusVertical className="h-8 w-8 text-[#0ea5e9]" />
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex ...">
+                      <div class="flex-auto w-10">
+                        <GoChecklist className="h-8 w-8 text-[#71717a]" />
+                      </div>
+                      <div className="flex-auto w-80 ml-4">
+                        <h2 className="card-title">Register</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
             </div>
+
             <div class="flex-none ..."></div>
             <div class="flex-1 w-64 ">
               <div className="ml-10 card w-96 bg-base-100 shadow-md max-h-96 overflow-y-auto">
@@ -96,7 +133,7 @@ const RegisterInput = () => {
                               <label class="inline-block h-8 py-1 w-full bg-[#38bdf8] mb-2 text-gray-500">
                                 <div class="flex">
                                   <div class="flex w-6 h-6 py-1 ml-2">
-                                  <TbNotes />
+                                    <TbNotes />
                                   </div>
                                   <div class="flex-none">NIB*</div>
                                 </div>

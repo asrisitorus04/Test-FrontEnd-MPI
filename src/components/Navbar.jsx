@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -7,13 +8,6 @@ import { AiOutlineQuestionCircle } from "react-icons/ai";
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
-  const handleLogOut = async () => {
-    localStorage.removeItem("token");
-    dispatch(handleAuth(false));
-    navigate("/");
-    alert("You've been log out ");
-  };
 
   useEffect(() => {
     dispatch(changeActive("Login"));
