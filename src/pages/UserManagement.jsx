@@ -19,6 +19,7 @@ const UserManagement = () => {
               alt="Shoes"
               className="rounded-lg h-60 w-96"
             />
+            
           </figure>
           <div className="card-body">
             <h2 className="card-title mb-10">My Profile</h2>
