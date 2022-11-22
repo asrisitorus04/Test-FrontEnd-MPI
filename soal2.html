@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Order Item</title>
+    <link rel="stylesheet" href="pemesanan.css" type="text/css" />
+    <link rel="shortcut icon" href="DossierNoir.png" />
+    <script type="text/javascript" src="pemesanan.js"></script> 
+</head>
+<body>
+    <h1>Form Order Item</h1><br>
+
+    <section>
+        <form name="form" action="#">
+        <table cellpadding=3 border=1>
+        <tr>
+        <th width=30>ID</th>
+        <th width=280>OrderID</th>
+        <th>Product ID</th>
+        <th width=120>Price</th>
+        <th width=200>Qty</th>
+        </tr>
+        
+        <tr>
+        <td> 1.</td>
+        <td>012</td>
+        <td>254</td>
+        <td>Rp. <input type="text" name="harga1" value="10000" size=5 readonly></td>
+        <td><center><input type="text" name="jumlah1" onchange="proses()" size=12 style="text-align:center"></center></td>
+        </tr>
+        
+        <tr>
+        <td> 2.</td>
+        <td>014</td>
+        <td>269</td>
+        <td>Rp. <input type="text" name="harga2" value="5000" size=5 readonly></td>
+        <td><center><input type="text" name="jumlah2" onchange="proses()" size=12 style="text-align:center"></center></td>
+        </tr>
+        
+        <tr>
+        <td> 3.</td>
+        <td>015</td>
+        <td>276</td>
+        <td>Rp. <input type="text" name="harga3" value="10000" size=5 readonly></td>
+        <td><center><input type="text" name="jumlah3" onchange="proses()" size=12 style="text-align:center"></center></td>
+        </tr>
+        
+        <tr>
+        <td> 4.</td>
+        <td>016</td>
+        <td>298</td>
+        <td>Rp. <input type="text" name="harga4" value="5000" size=5 readonly></td>
+        <td><center><input type="text" name="jumlah4" onchange="proses()" size=12 style="text-align:center"></center></td>
+        </tr>
+        
+        <tr>
+        <td> 5.</td>
+        <td>017</td>
+        <td>267</td>
+        <td>Rp. <input type="text" name="harga5" value="5000" size=5 readonly></td>
+        <td><center><input type="text" name="jumlah5" onchange="proses()" size=12 style="text-align:center"></center></td>
+        </tr>
+        
+        <tr>
+        <td colspan=4 align="right">JUMLAH TOTAL</td>
+        <td>Rp. <input type="text" name="total"  style="text-align:center" readonly></center></td>
+        </td>
+        
+        </table>
+        <br />
+        <center><input type="button" value="BATAL" onclick="batal()" /></center>
+        </form>
+        </section>
+	</table>
+	<script type="text/javascript">
+		function HargaTotal() {
+            var myForm = document.pemesanan;
+            var total1;
+            var total2;
+            var total3;
+            var total4;
+            var total5;
+            var jumlah1 = parseInt(myForm.jumlah1.value);
+            var jumlah2 = parseInt(myForm.jumlah2.value);
+            var jumlah3 = parseInt(myForm.jumlah3.value);
+            var jumlah4 = parseInt(myForm.jumlah4.value);
+            var jumlah5 = parseInt(myForm.jumlah5.value);
+
+            if(myForm.jumlah1.value == "") jumlah1=0;
+            if(myForm.jumlah2.value == "") jumlah2=0;
+            if(myForm.jumlah3.value == "") jumlah3=0;
+            if(myForm.jumlah4.value == "") jumlah4=0;
+            if(myForm.jumlah5.value == "") jumlah5=0;
+
+            total1 = parseInt(myForm.harga1.value)*jumlah1;
+            total2 = parseInt(myForm.harga2.value)*jumlah2;
+            total3 = parseInt(myForm.harga3.value)*jumlah3;
+            total4 = parseInt(myForm.harga4.value)*jumlah4;
+            total5 = parseInt(myForm.harga5.value)*jumlah5;
+
+            myForm.total.value = total1 + total2 + total3 + total4 + total5;
+        }
+
+        function proses() {
+            HargaTotal();
+            diskon();
+            TotalBayar();
+        }
+
+        function batal() {
+            var element = document.pemesanan;
+
+            element.jumlah2.value = "";
+            element.jumlah2.value = "";
+            element.jumlah3.value = "";
+            element.jumlah4.value = "";
+            element.jumlah5.value = "";
+            element.total.value = "";
+            element.potongan.value = "";
+            element.bayar.value = "";
+        }
+	</script>
+</body>
+</html>
