@@ -11,51 +11,51 @@ const UserManagement = () => {
 
   return (
     <>
-      <div class="row-span-3">
-        <div className="card lg:card-side bg-base-100 shadow-xl h-screen">
+      <div className="">
+        <div className="pt-2 ml-20 h-screen">
           <figure className="px-10">
             <img
               src="https://placeimg.com/400/225/arch"
               alt="Shoes"
-              className="rounded-xl"
+              className="rounded-lg"
             />
           </figure>
           <div className="card-body">
             <h2 className="card-title mb-10">My Profile</h2>
-            <div class="flex">
-              <div class="flex-none"></div>
-              <div class="flex-1 w-64">Nama Lengkap:</div>
-              <div class="flex-1 w-32">Ramon Dimitri</div>
+            <div className="flex">
+              <div className="flex-none"></div>
+              <div className="flex-1 w-64">Nama Lengkap:</div>
+              <div className="flex-1 w-32">Ramon Dimitri</div>
             </div>
 
-            <div class="flex">
-              <div class="flex-none"></div>
-              <div class="flex-1 w-64">Jenis Kelamin:</div>
-              <div class="flex-1 w-32">Perempuan</div>
+            <div className="flex">
+              <div className="flex-none"></div>
+              <div className="flex-1 w-64">Jenis Kelamin:</div>
+              <div className="flex-1 w-32">Perempuan</div>
             </div>
 
-            <div class="flex">
-              <div class="flex-none"></div>
-              <div class="flex-1 w-64">Profesi:</div>
-              <div class="flex-1 w-32">Suster</div>
+            <div className="flex">
+              <div className="flex-none"></div>
+              <div className="flex-1 w-64">Profesi:</div>
+              <div className="flex-1 w-32">Suster</div>
             </div>
 
-            <div class="flex">
-              <div class="flex-none"></div>
-              <div class="flex-1 w-64">Kontak:</div>
-              <div class="flex-1 w-32">0816738295</div>
+            <div className="flex">
+              <div className="flex-none"></div>
+              <div className="flex-1 w-64">Kontak:</div>
+              <div className="flex-1 w-32">0816738295</div>
             </div>
 
-            <div class="flex">
-              <div class="flex-none"></div>
-              <div class="flex-1 w-64">Email:</div>
-              <div class="flex-1 w-32">ramon12@gmail.com</div>
+            <div className="flex">
+              <div className="flex-none"></div>
+              <div className="flex-1 w-64">Email:</div>
+              <div className="flex-1 w-32">ramon12@gmail.com</div>
             </div>
 
-            <div class="flex">
-              <div class="flex-none"></div>
-              <div class="flex-1 w-64">Alamat Lengkap:</div>
-              <div class="flex-1 w-32">Jakart Timur, Kemayoran no.05</div>
+            <div className="flex">
+              <div className="flex-none"></div>
+              <div className="flex-1 w-64">Alamat Lengkap:</div>
+              <div className="flex-1 w-32">Jakart Timur, Kemayoran no.05</div>
             </div>
             <h3 className="text-success border text-center font-bold w-20 bg-green-100">
               Active

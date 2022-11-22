@@ -19,7 +19,7 @@ const NotFound = () => {
             URL?
           </p>
         </div>
-        <div class="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center">
           <Link to="/homepage">
             <ButtonReturn/>
           </Link>

@@ -15,10 +15,6 @@ const Login = () => {
   return (
     <>
       <div className="w-full h-screen">
-        <img
-          src="bglogin.jpg"
-          alt="Image alt text"
-        />
         <Navbar />
         <div className="ml-20 mt-20">
           <p className="text-2xl font-semibold">Selamat Datang di Solusi</p>
@@ -69,7 +65,7 @@ const Login = () => {
                     id="flexCheckDefault"
                   />
                   <label
-                    class="form-check-label inline-block text-gray-800"
+                    className="form-check-label inline-block text-gray-800"
                     for="flexCheckDefault"
                   >
                     Ingat Saya

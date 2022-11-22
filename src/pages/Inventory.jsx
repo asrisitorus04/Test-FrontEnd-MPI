@@ -26,7 +26,7 @@ const Inventory = () => {
       </div>
 
       <div>
-        <div class="grid grid-cols-4 gap-4 ml-2 mt-6 mb-4">
+        <div className="grid grid-cols-4 gap-4 ml-2 mt-6 mb-4">
           <div>
             <figure>
               <img

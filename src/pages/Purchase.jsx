@@ -17,16 +17,16 @@ const Purchase = () => {
           Purchase Order OLIN
         </h1>
         <p className="mt-20">
-          <div class="flex ...">
-            <div class="flex-auto w-64 ml-10">
+          <div className="flex ...">
+            <div className="flex-auto w-64 ml-10">
                 <span>Alamat Perusahaan</span>
                 <div>
                 <span>Jalan, Kemayoran Timur</span>
                 </div>
                 <span>Jakarta Timur</span>
             </div>
-            <div class="flex-none"></div>
-            <div class="flex-auto w-64 ml-40">
+            <div className="flex-none"></div>
+            <div className="flex-auto w-64 ml-40">
                 <div>Tanggal pemesanan:
                     <span className="ml-4">12/05/2019</span>
                 </div>
@@ -109,12 +109,12 @@ const Purchase = () => {
         </section>
 
         <p className="mt-8">
-          <div class="flex ...">
-            <div class="flex-auto w-64 ml-10 mt-20">
+          <div className="flex ...">
+            <div className="flex-auto w-64 ml-10 mt-20">
                 <span className="text-warning">*syarat dan ketentuan</span>
             </div>
-            <div class="flex-none"></div>
-            <div class="flex-auto w-64 ml-40 mt-20 mb-40">
+            <div className="flex-none"></div>
+            <div className="flex-auto w-64 ml-40 mt-20 mb-40">
                 <div>Sub Total:
                     <span className="ml-4">Rp. 470.000</span>
                 </div>
