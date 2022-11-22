@@ -4,6 +4,7 @@ import { TbNotes } from "react-icons/tb";
 import { ImLocation } from "react-icons/im";
 import { GoChecklist } from "react-icons/go";
 import { TbMinusVertical } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const RegisterInput = () => {
   return (
@@ -13,14 +14,13 @@ const RegisterInput = () => {
         <div>
           <div class="flex">
             <div class="flex-1 w-64">
-
               <div className="card w-96 bg-base-100 mt-10 ml-20">
                 <div className="card-body">
                   <div>
                     <div className="flex">
                       <div className="flex-auto w-10">
                         {/* <IoPersonCircle /> */}
-                        <ImLocation className="h-8 w-8 text-[#0ea5e9]" />
+                        <ImLocation className="h-8 w-8 text-[#0ea5e9] bg-sky-200 rounded-full hover:bg-sky-700 s" />
                       </div>
                       <div className="flex-auto w-80 ml-4">
                         <h2 className="card-title">Pendaftaran Sarana</h2>
@@ -31,7 +31,7 @@ const RegisterInput = () => {
                   <div>
                     <div className="flex-auto w-10">
                       {/* <IoPersonCircle /> */}
-                      <TbMinusVertical className="h-8 w-8 text-[#0ea5e9]" />
+                      <TbMinusVertical className="h-8 w-8" />
                     </div>
                   </div>
 
@@ -47,7 +47,6 @@ const RegisterInput = () => {
                   </div>
                 </div>
               </div>
-              
             </div>
 
             <div class="flex-none ..."></div>
@@ -163,10 +162,16 @@ const RegisterInput = () => {
                                 </label>
                               </div>
                             </div>
-                            <div class="flex justify-center p-2">
-                              <button class="w-full px-4 py-2 text-white bg-[#ea580c] rounded shadow-xl">
-                                Create
-                              </button>
+                            <div class="justify-center w-72 ml-6">
+                              <Link
+                                to="/register"
+                                id="register"
+                                className="text-light text-base text-red-600 text-center"
+                              >
+                                <button class="w-full px-4 py-2 text-white bg-[#ea580c] rounded shadow-xl">
+                                  Selanjutnya
+                                </button>
+                              </Link>
                             </div>
                           </div>
                         </div>
