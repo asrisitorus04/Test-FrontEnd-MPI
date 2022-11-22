@@ -15,9 +15,9 @@ const UserManagement = () => {
         <div className="pt-2 ml-20 h-screen">
           <figure className="px-10">
             <img
-              src="https://placeimg.com/400/225/arch"
+              src="https://www.harmony.co.id/wp-content/uploads/2021/04/Tips-Membangun-User-Persona.jpg"
               alt="Shoes"
-              className="rounded-lg"
+              className="rounded-lg h-60 w-96"
             />
           </figure>
           <div className="card-body">
