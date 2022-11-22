@@ -1,8 +1,12 @@
 import { AiOutlineQuestionCircle, AiOutlineMail } from "react-icons/ai"
+import { useSelector } from "react-redux"
 
 const Navbars = () => {
+
+    const changeActive = useSelector(state => state.navActive.value)
+
     return (
-        <div className="w-full h-14 bg-white border flex justify-end items-center text-[#8b8b8b] p-3 mb-10">
+        <div className={`${changeActive === "Login" ? "hidden" : ""} w-full h-14 bg-white border flex justify-end items-center text-[#8b8b8b] p-3 mb-10`}>
             <AiOutlineQuestionCircle size={30} className="mr-6"/>
             <AiOutlineMail size={30} className="mr-6"/>
             <div className="flex items-center ">

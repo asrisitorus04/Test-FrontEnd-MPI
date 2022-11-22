@@ -1,18 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavbarRegis from "../components/NavbarRegis";
 import { ImLocation } from "react-icons/im";
 import { GoChecklist } from "react-icons/go";
 import { TbMinusVertical } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { changeActive } from "../utils/redux/navActive/navSlice";
+
 
 const Register = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(changeActive("Login"));
+  }, []);
   return (
     <>
       <div>
         <NavbarRegis />
         <div>
-          <div class="flex">
-            <div class="flex-1 w-64">
+          <div className="flex">
+            <div className="flex-1 w-64">
               <div className="card w-96 bg-base-100 mt-10 ml-20">
                 <div className="card-body">
                   <div>
@@ -112,8 +120,8 @@ const Register = () => {
                           className="text-light text-base text-red-600 text-center"
                         >
                           <button className="btn bg-white text-black w-36 border">
-                          Kembali
-                        </button>
+                            Kembali
+                          </button>
                         </Link>
                       </div>
                     </div>
@@ -122,14 +130,14 @@ const Register = () => {
 
                     <div class="flex-1 w-64 ml-1">
                       <div className="card-actions justify-end">
-                      <Link
+                        <Link
                           to="/"
                           id="register"
                           className="text-light text-base text-red-600 text-center"
                         >
                           <button className="btn btn-warning w-36">
-                          Register
-                        </button>
+                            Register
+                          </button>
                         </Link>
                       </div>
                     </div>
