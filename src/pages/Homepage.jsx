@@ -2,10 +2,11 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import Card from "../components/Card";
 import { changeActive } from "../utils/redux/navActive/navSlice";
-import { IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowUp, IoMdArrowDropup } from "react-icons/io";
 import { AiOutlineFileDone } from "react-icons/ai";
 import { GiReceiveMoney } from "react-icons/gi";
 import { BsThreeDotsVertical, BsGraphUp } from "react-icons/bs";
+import { MdArrowDropDown } from "react-icons/md";
 
 const Homepage = () => {
   const dispatch = useDispatch();
@@ -102,6 +103,51 @@ const Homepage = () => {
             <p>Sales & Purchase</p>
             <BsThreeDotsVertical size={26} />
           </Card.Title>
+          <div>
+            <div className="grid grid-rows-3 grid-flow-col">
+              <div className="col-span-2">02</div>
+              <div className="row-span-2 col-span-2  mt-40">
+                <div className="grid grid-cols-4">
+                  <div className="text-center font-semibold">Target</div>
+                  <div className="text-center font-semibold">Last Week</div>
+                  <div className="text-center font-semibold">Last Month</div>
+                  <div className="text-center font-semibold">This Year</div>
+                  <div className="">
+                    <div className="grid grid-cols-2">
+                      <div className="ml-12">
+                        <IoMdArrowDropup className="h-6 w-6 text-cyan-500" />
+                      </div>
+                      <div className="text-cyan-500">231</div>
+                    </div>
+                  </div>
+                  <div className="">
+                    <div className="grid grid-cols-2">
+                      <div className="ml-12">
+                        <MdArrowDropDown className="h-6 w-6 text-red-500" />
+                      </div>
+                      <div className="text-red-500">224</div>
+                    </div>
+                  </div>
+                  <div className="">
+                    <div className="grid grid-cols-2">
+                      <div className="ml-12">
+                        <IoMdArrowDropup className="h-6 w-6 text-cyan-500" />
+                      </div>
+                      <div className="text-cyan-500">2132</div>
+                    </div>
+                  </div>
+                  <div className="">
+                    <div className="grid grid-cols-2">
+                      <div className="ml-12">
+                        <IoMdArrowDropup className="h-6 w-6 text-cyan-500" />
+                      </div>
+                      <div className="text-cyan-500">8123</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </Card>
         <div className="grid grid-rows-3 w-3-12 mx-4 gap-y-5">
           {dataTransaction.map((item, i) => {
@@ -125,7 +171,7 @@ const Homepage = () => {
             <p>Inventory</p>
             <BsThreeDotsVertical size={26} />
           </Card.Title>
-          <Card.Body className="mt-5">
+          <Card.Body className="mt-10">
             {dataInventory.map((item, i) => {
               return (
                 <div key={i} className="flex justify-between px-5 mt-2">
@@ -142,6 +188,68 @@ const Homepage = () => {
           <Card.Title className="text-xl font-bold">
             <p>Persentase Penjualan Obat</p>
           </Card.Title>
+          <div>
+            <div className="grid grid-rows-3 grid-flow-col">
+              <div className="col-span-2">02</div>
+
+              <div className="row-span-2 col-span-2 mt-24">
+                <div className="grid grid-rows-2 grid-flow-col h-10">
+                  <div className="col-span-2">
+                    <div className="grid grid-rows-2 grid-flow-col">
+                      <div className="col-span-2 h-4 w-6 rounded-sm bg-cyan-500 mt-1 ml-2"></div>
+                      <div className="row-span-2 col-span-2 mr-2">Offline(40%)</div>
+                    </div>
+                  </div>
+                  <div className="row-span-2 col-span-2">
+                    <div className="grid grid-rows-2 grid-flow-col ml-20">
+                      <div className="col-span-2 h-4 w-6 rounded-sm bg-emerald-500 mt-1 ml-2"></div>
+                      <div className="row-span-2 col-span-2 mr-20 ml-2">GrabHealth(4%)</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid grid-rows-2 grid-flow-col h-10">
+                  <div className="col-span-2">
+                    <div className="grid grid-rows-2 grid-flow-col">
+                      <div className="col-span-2 h-4 w-6 rounded-sm bg-emerald-900 mt-1 ml-2"></div>
+                      <div className="row-span-2 col-span-2 mr-20">AloDoc(10%)</div>
+                    </div>
+                  </div>
+                  <div className="row-span-2 col-span-2">
+                    <div className="grid grid-rows-2 grid-flow-col">
+                      <div className="col-span-2 h-4 w-6 rounded-sm bg-lime-600 mt-1 ml-2"></div>
+                      <div className="row-span-2 col-span-2 mr-24">Tokopedia(6%)</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid grid-rows-2 grid-flow-col h-10">
+                  <div className="col-span-2">
+                    <div className="grid grid-rows-2 grid-flow-col">
+                      <div className="col-span-2 h-4 w-6 rounded-sm bg-red-500 mt-1 ml-2"></div>
+                      <div className="row-span-2 col-span-2 mr-20 ml-2">Halodoc(20%)</div>
+                    </div>
+                  </div>
+                  <div className="row-span-2 col-span-2">
+                    <div className="grid grid-rows-2 grid-flow-col mr-4">
+                      <div className="col-span-2 h-4 w-6 rounded-sm bg-orange-600 mt-1 ml-2"></div>
+                      <div className="row-span-2 col-span-2 mr-24 ml-2">Shopee(10%)</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid grid-rows-2 grid-flow-col h-10">
+                  <div className="col-span-2">
+                    <div className="grid grid-rows-2 grid-flow-col">
+                      <div className="col-span-2 h-4 w-6 rounded-sm bg-slate-400 mt-1 ml-2"></div>
+                      <div className="row-span-2 col-span-2 mr-80">SehatQ(10%)</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </Card>
       </div>
     </div>

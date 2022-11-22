@@ -14,7 +14,11 @@ const Login = () => {
 
   return (
     <>
-      <div className="bg-[] w-full h-screen">
+      <div className="w-full h-screen">
+        <img
+          src="bglogin.jpg"
+          alt="Image alt text"
+        />
         <Navbar />
         <div className="ml-20 mt-20">
           <p className="text-2xl font-semibold">Selamat Datang di Solusi</p>
