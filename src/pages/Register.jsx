@@ -3,7 +3,7 @@ import NavbarRegis from "../components/NavbarRegis";
 import { ImLocation } from "react-icons/im";
 import { GoChecklist } from "react-icons/go";
 import { TbMinusVertical } from "react-icons/tb";
-
+import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
@@ -37,7 +37,7 @@ const Register = () => {
                   <div>
                     <div class="flex ...">
                       <div class="flex-auto w-10">
-                        <GoChecklist className="h-8 w-8 text-[#71717a]" />
+                        <GoChecklist className="h-8 w-8 text-[#0ea5e9] bg-sky-200 rounded-full hover:bg-sky-700 " />
                       </div>
                       <div className="flex-auto w-80 ml-4">
                         <h2 className="card-title">Register</h2>
@@ -106,9 +106,15 @@ const Register = () => {
                   <div class="flex mt-4">
                     <div class="flex-1 w-64">
                       <div className="card-actions justify-start">
-                        <button className="btn bg-white text-black w-36 border">
+                        <Link
+                          to="/inputdata"
+                          id="register"
+                          className="text-light text-base text-red-600 text-center"
+                        >
+                          <button className="btn bg-white text-black w-36 border">
                           Kembali
                         </button>
+                        </Link>
                       </div>
                     </div>
 
@@ -116,9 +122,15 @@ const Register = () => {
 
                     <div class="flex-1 w-64 ml-1">
                       <div className="card-actions justify-end">
-                        <button className="btn btn-warning w-36">
+                      <Link
+                          to="/"
+                          id="register"
+                          className="text-light text-base text-red-600 text-center"
+                        >
+                          <button className="btn btn-warning w-36">
                           Register
                         </button>
+                        </Link>
                       </div>
                     </div>
                   </div>
