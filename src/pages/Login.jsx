@@ -14,7 +14,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="bg-[#bfdbfe] w-full h-screen">
+      <div className="bg-[] w-full h-screen">
         <Navbar />
         <div className="ml-20 mt-20">
           <p className="text-2xl font-semibold">Selamat Datang di Solusi</p>
@@ -22,11 +22,17 @@ const Login = () => {
           <p className="font-medium">Sistem Manajemen Apotek Online</p>
         </div>
 
-        <div className="text-center mt-28">
-          <h5 className="text-lg font-bold">Silahkan masuk ke dalam akun anda dan kelola apotek anda.</h5>
+        <div className="text-center mt-20">
+          <h5 className="text-lg font-bold mb-4">
+            Silahkan masuk ke dalam akun anda dan kelola apotek anda.
+          </h5>
 
           <div>
-            <h1 className="text-2md text-left ml-80 font-semibold">EMAIL</h1>
+            <div className="ml-80">
+              <h1 className="text-2md ml-52 text-left w-64 font-semibold">
+                EMAIL
+              </h1>
+            </div>
             <Input
               id="Input Username Lgn"
               placeholder="Input username"
@@ -35,7 +41,11 @@ const Login = () => {
             />
           </div>
           <div>
-            <h1 className="text-2md text-left ml-80 font-semibold">PASSWORD</h1>
+            <div className="ml-80">
+              <h1 className="text-2md ml-52 text-left w-64  font-semibold">
+                PASSWORD
+              </h1>
+            </div>
             <Input
               id="Input Password Lgn"
               placeholder="Input Password"
@@ -78,27 +88,33 @@ const Login = () => {
           </div>
 
           <div className="flex space-x-2 justify-center">
-            <button
-              onClick={() => dispatch(changeActive("Login"))}
-              type="button"
-              className="inline-block px-32 mt-2 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+            <Link
+              to="/homepage"
+              id="register"
+              className="text-light text-base text-red-600 text-center"
             >
-              {" "}
-              Masuk{" "}
-            </button>
+              <button
+                onClick={() => dispatch(changeActive("Login"))}
+                type="button"
+                className="inline-block px-32 mt-2 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+              >
+                {" "}
+                Masuk{" "}
+              </button>
+            </Link>
           </div>
           <div>
             <p className="text-light text-base text-center text-[#B4B4B4]">
-                Belum Registrasi? Silahkan Klik
-                <Link
-                  to="/register"
-                  id="register"
-                  className="text-light text-base text-red-600 text-center"
-                >
-                  &nbsp; Daftar
-                </Link>
-              </p>
-            </div>
+              Belum Registrasi? Silahkan Klik
+              <Link
+                to="/inputdata"
+                id="register"
+                className="text-light text-base text-red-600 text-center"
+              >
+                &nbsp; Daftar
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </>
