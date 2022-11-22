@@ -13,14 +13,15 @@ const UserManagement = () => {
     <>
       <div className="">
         <div className="pt-2 ml-20 h-screen">
+          
           <figure className="px-10">
             <img
               src="https://www.harmony.co.id/wp-content/uploads/2021/04/Tips-Membangun-User-Persona.jpg"
               alt="Shoes"
               className="rounded-lg h-60 w-96"
             />
-            
           </figure>
+
           <div className="card-body">
             <h2 className="card-title mb-10">My Profile</h2>
             <div className="flex">
